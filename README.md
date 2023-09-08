@@ -1,4 +1,2 @@
-#This is me
-
-My name is Evan Liang and I am pursuing a degree in MIS
-
+# ITM352_repo
+To discover ITM352
