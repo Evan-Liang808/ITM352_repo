@@ -1,6 +1,6 @@
 //declare variable
 let age=20;
-let fav_num=10;
+let fav_num=65;
 let day_of_birth=11;
 let month_of_birth=8;
 
@@ -13,3 +13,4 @@ let calc2 = (age + fav_num) / day_of_birth * month_of_birth;
 document.getElementById("result1").innerHTML = calc1;
 
 document.getElementById("result2").innerHTML = calc2;
+
