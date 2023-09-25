@@ -87,6 +87,8 @@
                     <tr>
                         <td>
                             ${line++}
+                        </td>
+                        <td>
                             ${((now.getHours() + 11) % 12 + 1) + ":" + ((now.getMinutes()<10?'0':'') + now.getMinutes()) +" " + ((now.getHours() < 12)?'AM':'PM')}
                         </td>
                     </tr>
