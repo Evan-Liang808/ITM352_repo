@@ -13,6 +13,9 @@
     </p>
     <script>
         const store_name="Evan";
+        let first_name="Evan";
+        let last_name="Liang";
+
     </script>
 </head>
     <body onload="hits_span.innerHTML = hits; spins_span.innerHTML = spins;">
@@ -55,6 +58,40 @@
         <h1>
             <script>
                 document.write("Your one stop shop for used phones - "+store_name+"'s");
+                let line = 1
+                let now = new date;
+                document.write(`
+            <table border="1" style="margin-left: auto; margin-right: auto; text-align: center;">
+                <tbody>
+                    <tr>
+                        <th colspan="2">
+                        <h1>
+                            Your One Stop For Used Phones - ${first_name[0] + '.' + last_name[0] + '.'}
+                        </h1>
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>${line++}</td>
+                        <td><br>
+                            Copyright @ ${first_name + " "+ last_name}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            ${line++}
+                        </td>
+                        <td>
+                            ${now.getFullYear()}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            ${line++}
+                            ${((now.getHours() + 11) % 12 + 1) + ":" + ((now.getMinutes()<10?'0':'') + now.getMinutes()) +" " + ((now.getHours() < 12)?'AM':'PM')}
+                        </td>
+                    </tr>
+                </tbody>
+            </table>`);
             </script>
         </h1>
     </footer> 
