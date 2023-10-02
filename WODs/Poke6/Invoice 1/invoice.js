@@ -23,10 +23,13 @@ let item5 = 'Colgate Classic Toothbrush';
 let quantity5 = 12;
 let price5 = 1.89;
 let extended_price5 = quantity5*price5;
+
 //calculate subtotal
 let subTot = (extended_price1+extended_price2+extended_price3+extended_price4+extended_price5);
+
 //calculate tax
 let tax = (subTot*0.0575);
+
 //calculate final total
 let total = tax+subTot;
 
@@ -60,7 +63,8 @@ var row = invoiceTable.insertRow();
    row.insertCell().innerHTML = quantity5;
    row.insertCell().innerHTML = price1.toFixed(5);
    row.insertCell().innerHTML = extended_price5;
-//fill in values for footer rows
+
+   //fill in values for footer rows
 document.getElementById("subtotal_cell").innerHTML = "$" + subTot.toFixed(2);
 document.getElementById("tax_cell").innerHTML = "$" + tax.toFixed(2);
 document.getElementById("total_cell").innerHTML = "$"+total.toFixed(2);
