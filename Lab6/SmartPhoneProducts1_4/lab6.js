@@ -4,7 +4,7 @@ let monthInput=document.getElementById("monthIn");
 let result=document.getElementById("result");
 
 document.querySelector('button').addEventListener('click', function () {
-    let month=monthIn.value.toLowerCase();
+    let month=monthInput.value.toLowerCase();
 
     let days = -1;
 
