@@ -33,6 +33,11 @@ for (let i=0; i < product_quantities.length; i++) {
 }
 document.write("</table>");
 
+let deleteButton = document.createElement('button');
+deleteButton.textContent = 'Delete Last Row';
+deleteButton.addEventListener('click', deleteLastRow);
+document.body.appendChild(deleteButton);
+
 function addnewrow (){
     let table = document.querySelector('table');
     let newRow = table.insertRow();
