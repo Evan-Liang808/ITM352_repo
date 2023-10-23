@@ -1,4 +1,4 @@
-let quantity = [2,3,1,3,12];
+let quantity = [2,3,4,3,12];
 //let quantity = [2,"cat",-0.1,-3,0.12];
 let itemData = [
     {

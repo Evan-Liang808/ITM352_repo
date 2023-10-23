@@ -41,19 +41,23 @@ for (let i = 0; i < itemData.length; i++) {
     row.insertCell(3).innerHTML = '$' + extendedPrices[i].toFixed(2);
 }
 
+document.getElementById('total_cell').innerHTML = `$${total.toFixed(2)}`;
+document.getElementById('subtotal_cell').innerHTML = '$' + subtotal.toFixed(2);
+document.getElementById('tax_cell').innerHTML = '$' + taxAmount.toFixed(2);
+document.getElementById('shipping_cell').innerHTML = '$' +shippingCharge.toFixed(2);
+
 function validateQuantity(quantity){
    if(isNaN(quantity)){
        return "Not a Number";
    }else if (quantity<0 && !Number.isInteger(quantity)){
        return "Negative Inventory and not an Integer";
-   }else if (quantity <0){
+   }else if (quantity<0){
        return "Negative Inventory";
    }else if(!Number.isInteger(quantity)){
        return "Not an Integer";
    }else{
        return"";
    }
- 
  }
 
  function generateItemRows(){
@@ -75,8 +79,3 @@ function validateQuantity(quantity){
          subtotal += extendedPrice;
      }}}
 
-// Set the subtotal, tax, and total cells
-document.getElementById('total_cell').innerHTML = `$${total.toFixed(2)}`;
-document.getElementById('subtotal_cell').innerHTML = '$' + subtotal.toFixed(2);
-document.getElementById('tax_cell').innerHTML = '$' + taxAmount.toFixed(2);
-document.getElementById('shipping_cell').innerHTML = '$' +shippingCharge.toFixed(2);
