@@ -62,13 +62,13 @@ const product5 = {
 const products = [product1, product2, product3, product4, product5]
 
 
-for (i = 0; i < products.length; i++){
-    const product = product[i];
-    document.querySelector('.main').innerHTML
-    `<section class="item" onmousover="changeClassName(this);" onclick="resetClassName(this);">
+for (i = 0; i < products.length; i++) {
+    const product = products[i];
+    document.querySelector('.main').innerHTML += 
+    `<section class="item" onmouseover="changeClassName(this);" onclick="resetClassName(this);">
     <h2>${product.brand}</h2>
     <p>$${product.price}</p>
-    <img src="${product.image}"/>
+    <img src="${product.image}"/> 
     </section>`
 }
 
