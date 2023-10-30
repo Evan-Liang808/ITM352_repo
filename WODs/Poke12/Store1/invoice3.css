@@ -1,0 +1,28 @@
+table {
+    border-collapse: collapse;
+    width: 100%;
+    font-family: 'Times New Roman', Times, serif;
+    border: 4px solid #000; 
+}
+
+table, td {
+    border: 5 px solid #000;
+    text-align: left; 
+}
+
+th, td {
+    padding: 6px;
+    border: 1px solid #000; 
+    text-align: left;
+}
+
+th {
+    padding: 5px;
+    font-size: 22px;
+    border: 1px solid #000; 
+    text-align: left;
+}
+
+tfoot {
+    font-weight: bold;
+}

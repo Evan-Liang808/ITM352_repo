@@ -1,0 +1,95 @@
+body {
+  width: 800px;
+  margin: 0 auto;
+}
+
+/* Typography */
+h1, h2 {
+  text-align: center;
+}
+
+/* Block Styling */
+.main {
+  position: relative; /* Makes sure the pseudo-element positions relative to this */
+}
+
+.main::before {
+  content: ""; /* Necessary for the pseudo element to show */
+  background: url("Images/phone_globe.jpg");
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1; 
+  
+}
+
+/* Styling the products display */
+.item img {
+  width: 220px;
+  height:200px;
+}
+
+/* Div children of body */
+body > div {
+  border: 5px solid black;
+}
+.rotate {
+  animation: rotation .3s infinite linear;
+}
+
+@keyframes rotation {
+from {
+  transform: rotate(0deg);
+}
+to {
+  transform: rotate(359deg);
+}
+}
+
+.main {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2px;
+}
+
+.item:nth-child(5) {
+  grid-column: 1 / span 2;
+  justify-self: center;
+  margin-bottom: 45px; 
+}
+
+
+.item {
+  display: flex;
+  flex-direction: column;  /* stack children vertically */
+  align-items: center;     /* center children horizontally */
+  justify-content: center; /* center children vertically */
+}
+
+/* If your images aren't already centered by default, you can add this */
+.item img {
+  align-self: center;
+}
+
+/* purchase button styling */
+.purchase-btn {
+  display: inline-block;
+  padding: 15px 30px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  color: #fff; /* Text color */
+  background-color: #ff0000; /* Red background color */
+  transition: background-color 0.3s ease; /* Add a smooth transition to the background color */
+}
+
+/* Change the background color on hover to give a feedback effect */
+.purchase-btn:hover {
+  background-color: #cc0000; /* Darker red on hover */
+}
