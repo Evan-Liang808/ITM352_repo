@@ -23,7 +23,7 @@ function validateQuantity(quantity) {
     case quantity < 0:
         errorMessage = "Negative inventory. Please enter a non-negative quantity to order.";
         break;
-     case !Number.isInteger(quantity):
+    case !Number.isInteger(quantity):
         errorMessage = "Not an Integer. Please enter a non-negative quantity to order.";
         break;
     default:
@@ -31,4 +31,15 @@ function validateQuantity(quantity) {
         break;
     }
     return errorMessage;
+}
+function displayPurchase() {
+    let quantity = Number(document.getElementById('qty_textbox').value);
+    let validationMessage = validateQuantity(quantity);
+    if(validationMessage =="") {
+        let message = `Thank you for ordering ${quantity} things!`;
+        document.body.innerHTML = message;
+    } else {
+        alert(validationMessage + " Please enter a positive integer for quantity.")
+        document.getElementById('qty_textbox').value="";
+    }
 }
