@@ -4,7 +4,7 @@ function updateQuantityMessage(textbox) {
     //validate the quantity entered
     let validationMessage = validateQuantity(Number(textbox.value));
 
-    //if there are validation errors, display error message
+    //if there are validation errors, message will show
     if (validationMessage !=="") {
         quantityMessage.innerHTML = validationMessage;
     } else {
