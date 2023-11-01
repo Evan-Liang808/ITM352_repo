@@ -102,7 +102,6 @@ function generateItemRows() {
         row.insertCell(1).innerHTML = itemQuantity;
         row.insertCell(2).innerHTML = "$" + item.price.toFixed(2);
         row.insertCell(3).innerHTML = "$"+extendedPrice.toFixed(2);
-
     }
   }
 }
