@@ -8,6 +8,7 @@ lwindow.onload = function () {
     if (error) {
         alert(error);
     }
+
     //define a variable that points to the form on the DOM
     const form = document.getElementById('productForm');
     let formHTML = '';
@@ -21,8 +22,10 @@ lwindow.onload = function () {
         <span id="quantity_textbox[${i}]_message">Enter a quantity</span><br>
     `; 
     }
+
     //ensure the submit button is part of the form
     formHTML+= `<br> <input type="submit" value="Purchase">`;
+    
     //push the form content to the DOM
     form.innerHTML=formHTML;
 }
@@ -35,24 +38,22 @@ function checkQuantityTextbox(theTextbox) {
 //add the validateQuantity
 function validateQuantity(quantity) {
     let errorMessage = "";
-
     switch (true) {
-        case isNaN(quantity):
-            errorMessage = "Not a number. Please enter a non-negative quantity to order.";
-            break;
-        case quantity < 0 && !Number.isInteger(quantity):
-            errorMessage = "Negative inventory and not an Integer. Please enter a non-negative quantity to order.";
-            break;
-        case quantity < 0:
-            errorMessage = "Negative inventory. Please enter a non-negative quantity to order.";
-            break;
-        case !Number.isInteger(quantity):
-            errorMessage = "Not an Integer. Please enter a non-negative quantity to order.";
-            break;
-        default:
-            errorMessage = ""; // No errors
-            break;
+    case isNaN(quantity):
+        errorMessage = "Not a number. Please enter a non-negative quantity to order.";
+        break;
+    case quantity < 0 && !Number.isInteger(quantity):
+        errorMessage = "Negative inventory and not an Integer. Please enter a non-negative quantity to order.";
+        break;
+    case quantity < 0:
+        errorMessage = "Negative inventory. Please enter a non-negative quantity to order.";
+        break;
+    case !Number.isInteger(quantity):
+        errorMessage = "Not an Integer. Please enter a non-negative quantity to order.";
+        break;
+    default:
+         errorMessage = ""; // No errors
+        break;
     }
-
     return errorMessage;
 }
