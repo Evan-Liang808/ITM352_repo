@@ -4,11 +4,11 @@ lwindow.onload = function () {
     let q = Number(params.get('quantity'));
     let error = params.get('error');
 
-    //if there is an error, alert the user
+    //if there is an error alert user
     if (error) {
         alert(error);
     }
-    //define a variable that points to the form on the DOM in order to dynamically populate the form
+    //define a variable that points to the form on the DOM
     const form = document.getElementById('productForm');
     let formHTML = '';
 
@@ -26,13 +26,13 @@ lwindow.onload = function () {
     //push the form content to the DOM
     form.innerHTML=formHTML;
 }
-//add the checkQuantityTextbox() 
+//add the checkQuantityTextbox 
 function checkQuantityTextbox(theTextbox) {
     let errs = validateQuantity(theTextbox.value, true);
     document.getElementById(theTextbox.name + '_message').innerHTML = errs;
 }
 
-//add the validateQuantity()
+//add the validateQuantity
 function validateQuantity(quantity) {
     let errorMessage = "";
 
