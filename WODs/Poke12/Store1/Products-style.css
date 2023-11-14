@@ -54,7 +54,7 @@ to {
   gap: 2px;
 }
 
-.item:nth-child(5) {
+.item:nth-child(6) {
   grid-column: 1 / span 2;
   justify-self: center;
   margin-bottom: 45px; 
