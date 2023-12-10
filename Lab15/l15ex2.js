@@ -12,7 +12,7 @@ app.use(session({secret: "MySecretKey", resave: true, saveUninitialized: true}))
 // Set cookie - arrow function
 app.get('/set_cookie', (req, res) => {
     // cookie with username parameter
-    res.cookie('username', 'Jessica', {maxAge: 10000});
+    res.cookie('username', 'Evan', {maxAge: 10000});
     res.send('Cookie has been set with your name.');
 })
 
@@ -28,8 +28,6 @@ app.get('/use_session', (req, res) => {
     res.send(`Welcome, your session ID is ${req.session.id}`); 
 })
 
-
-// modified for extra credit 2 to push error message with login prompts
 app.get("/login", function (request, response) {
     // Give a simple login form
     str = `
